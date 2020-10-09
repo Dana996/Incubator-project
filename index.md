@@ -17,13 +17,19 @@ The full time position indicates whether or not a position is full time. The yea
 
 Our final goal is to estimate the probability of having an H-1B visa application rejected. In order to demonstrate viability, we show that there is sufficient data to obtain meaningful results. In this notebook, we focus on the relationship between wages and applications. In particular, we compute a chi-square statistic to show that the is a clear relationship between wages and the probability of seeing and H-1B application denied.
 
-## Wage Distribution
+## Wage Distribution{.tabset}
 
 We plot wage distribution for full time and non full time positions. The plots are presented for the totality of the data, as well as by year.
 
 Notes: We remove rows with wages of of 0 as well as those whose wages are above $250 000 (we consider very high wages to be outliers.). Doing so, we omit an insignificant amount of data (about 0.1%).
 
-### Observations
+### Total
+![Wage Distribution](../figs/wage_distribution_total.png)
+
+### 2011
+
+
+## Observations
 
 We observe that the separation between full time and not full time does not make sense for the year 2016. In fact, it seems that the data was simply divided between wages above and below \$70 000.
 
