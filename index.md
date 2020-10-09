@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# Exploratory Data Analysis for H1B visas - Wage effect
 
-You can use the [editor on GitHub](https://github.com/Dana996/Incubator-project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is an initial analysis performed on a data set obtained on [Kaggle](https://www.kaggle.com/nsharan/h-1b-visa) and containing over 3 million rows. More data can be obtained from the *Office of Foreign Labor Certification* which outputs yearly data sets. See this [link](https://www.dol.gov/agencies/eta/foreign-labor/performance) for more performance indices.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+For this section, we load the data set with 4 columns: case status, full time position, prevailing wage and year. The case status is one of
 
-### Markdown
+- CERTIFIED-WITHDRAWN
+- WITHDRAWN
+- CERTIFIED
+- DENIED
+- REJECTED (only 2 rows)
+- INVALIDATED (only 1 row)
+- PENDING QUALITY AND COMPLIANCE REVIEW - UNASSIGNED (only 15 rows)
+- Not available (nan)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The full time position indicates whether or not a position is full time. The year ranges from 2011 to 2016.
 
-```markdown
-Syntax highlighted code block
+Our final goal is to estimate the probability of having an H-1B visa application rejected. In order to demonstrate viability, we show that there is sufficient data to obtain meaningful results. In this notebook, we focus on the relationship between wages and applications. In particular, we compute a chi-square statistic to show that the is a clear relationship between wages and the probability of seeing and H-1B application denied.
 
-# Header 1
-## Header 2
-### Header 3
+## Wage Distribution
 
-- Bulleted
-- List
+We plot wage distribution for full time and non full time positions. The plots are presented for the totality of the data, as well as by year.
 
-1. Numbered
-2. List
+Notes: We remove rows with wages of of 0 as well as those whose wages are above $250 000 (we consider very high wages to be outliers.). Doing so, we omit an insignificant amount of data (about 0.1\%).
 
-**Bold** and _Italic_ and `Code` text
+### Observations
 
-[Link](url) and ![Image](src)
-```
+We observe that the separation between full time and not full time does not make sense for the year 2016. In fact, it seems that the data was simply divided between wages above and below \$70 000.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Moreover, we can see that most applications that are not full time appeared in the year 2016. Indeed, see the following table.
 
-### Jekyll Themes
+| 2011   | 2012   | 2013  | 2014  | 2015  |  2016 | 
+| :----- | :----: | :---: | :---: | :---: | -----: |
+|  16579 |	15617 |	13557 |	14182 |	15093 | 351128 |
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Dana996/Incubator-project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This is probably due to some error in the data collection. We therefore will not separate between full time and non full time positions in the year 2016.
