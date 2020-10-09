@@ -21,7 +21,7 @@ Our final goal is to estimate the probability of having an H-1B visa application
 
 We plot wage distribution for full time and non full time positions. The plots are presented for the totality of the data, as well as by year.
 
-Notes: We remove rows with wages of of 0 as well as those whose wages are above $250 000 (we consider very high wages to be outliers.). Doing so, we omit an insignificant amount of data (about 0.1\%).
+Notes: We remove rows with wages of of 0 as well as those whose wages are above $250 000 (we consider very high wages to be outliers.). Doing so, we omit an insignificant amount of data (about 0.1%).
 
 ### Observations
 
