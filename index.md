@@ -1,4 +1,4 @@
-# Wage
+# Wage - change
 
 This is an initial analysis performed on a data set obtained on [Kaggle](https://www.kaggle.com/nsharan/h-1b-visa) and containing over 3 million rows. More data can be obtained from the *Office of Foreign Labor Certification* which outputs yearly data sets. See this [link](https://www.dol.gov/agencies/eta/foreign-labor/performance) for more performance indices.
 
