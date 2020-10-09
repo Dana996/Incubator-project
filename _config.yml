@@ -1,4 +1,6 @@
 theme: jekyll-theme-slate
 
+title: Visa H-1B application in the United States
+
 include_dir: ["EDA-1", "EDA-2", "figs"]
 hide_navbar: ["figs"]
