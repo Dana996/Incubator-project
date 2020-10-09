@@ -36,4 +36,4 @@ Moreover, we can see that most applications that are not full time appeared in t
 
 This is probably due to some error in the data collection. We therefore will not separate between full time and non full time positions in the year 2016.
 
-[return](https://dana996.github.io/Incubator-project/)
+[return](./)
